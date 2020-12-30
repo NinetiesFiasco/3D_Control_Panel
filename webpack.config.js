@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -55,6 +56,11 @@ module.exports = {
       img: 'src',
       image: ['xlink:href', 'href'],
       use: ['xlink:href', 'href']
+    }),    
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname,`page.html`),
+      filename: './index.html',
+      inject: false
     })
   ],
   resolve: {
