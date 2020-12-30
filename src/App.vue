@@ -1,25 +1,28 @@
-<template>
-  <div id="app">
-    <img width="25%" src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
 #app {
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background: black;
 }
 </style>
+
+<template>
+  <div id="app">
+    <StageControls/>
+  </div>
+</template>
+
+<script>
+import StageControls from './components/StageControls/StageControls.vue'
+
+export default {
+  name: 'App',
+  components: {
+    StageControls
+  }
+}
+</script>
